@@ -6,6 +6,5 @@ export default class {
         let photos = await PhotoService.getPhotos();
         let photoCollections = new PhotoCollection();
         photoCollections.fillCollections(photos);
-
     }
 }
