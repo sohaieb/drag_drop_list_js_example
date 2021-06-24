@@ -14,12 +14,13 @@ const config = {
     entry: './app/bootstrap.js',
     mode: "development",
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'dist','scripts'),
     },
     plugins: [
         new CopyPlugin({
             patterns: [
-                { from: path.resolve(__dirname, "app","src","styles.css"), to: path.resolve(__dirname, "dist","styles.css"), }
+                { from: path.resolve(__dirname, "app","index.html"), to: path.resolve(__dirname, "dist" ,"index.html"), },
+                { from: path.resolve(__dirname, "app","src","styles.css"), to: path.resolve(__dirname, "dist","styles","styles.css"), }
             ],
         }),
     ],
@@ -43,10 +44,11 @@ const config = {
         ],
     },
     devServer: {
-        contentBase: './',
+        contentBase: './dist',
         compress: true,
         port: 9000,
-    }
+    },
+    devtool: "eval-source-map"
 };
 
 module.exports = () => {
