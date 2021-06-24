@@ -42,6 +42,11 @@ const config = {
             // Learn more about loaders from https://webpack.js.org/loaders/
         ],
     },
+    devServer: {
+        contentBase: './',
+        compress: true,
+        port: 9000,
+    }
 };
 
 module.exports = () => {
