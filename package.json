@@ -8,6 +8,7 @@
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
+    "build:prods": "webpack --config webpack.config.prod.js",
     "watch": "webpack --watch",
     "run:serve": "npm run build && webpack serve"
   },
@@ -26,6 +27,7 @@
     "@babel/preset-env": "^7.14.7",
     "@webpack-cli/generators": "^2.2.0",
     "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^9.0.0",
     "css-loader": "^5.2.6",
     "eslint": "^7.29.0",

@@ -2,7 +2,7 @@
 
 const path = require('path');
 const CopyPlugin = require("copy-webpack-plugin");
-
+const CleanPlugin = require('clean-webpack-plugin');
 const isProduction = process.env.NODE_ENV == 'production';
 
 
@@ -23,6 +23,8 @@ const config = {
                 { from: path.resolve(__dirname, "app","src","styles.css"), to: path.resolve(__dirname, "dist","styles","styles.css"), }
             ],
         }),
+      new CleanPlugin.CleanWebpackPlugin()
+
     ],
     module: {
         rules: [
